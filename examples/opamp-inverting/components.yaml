@@ -1,3 +1,29 @@
 R1:
   name: R1
   type: resistor
+  value: 10k
+
+Rf:
+  name: Rf
+  type: resistor
+  value: 100k
+
+U1:
+  name: U1
+  type: opamp
+  value: opamp-generic
+
+Vin:
+  name: Vin
+  type: source
+  value: AC 1V
+
+VCC:
+  name: VCC
+  type: power
+  value: +15V
+
+VEE:
+  name: VEE
+  type: power
+  value: -15V
