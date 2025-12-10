@@ -1,0 +1,40 @@
+Electronic-Legion-library/
+│
+├── README.md
+├── LICENSE
+│
+├── circuits/
+│   ├── opamps/
+│   │   ├── inverting-amplifier.md
+│   │   ├── non-inverting-amplifier.md
+│   │   ├── differential-amplifier.md
+│   │   └── integrator-differentiator.md
+│   │
+│   ├── filters/
+│   │   ├── low-pass-filter.md
+│   │   ├── high-pass-filter.md
+│   │   └── band-pass-filter.md
+│   │
+│   ├── diode-circuits/
+│   │   ├── rectifiers.md
+│   │   ├── clippers.md
+│   │   └── clampers.md
+│   │
+│   ├── transistor-circuits/
+│   │   ├── bjt-amplifiers.md
+│   │   └── mosfet-amplifiers.md
+│   │
+│   └── basic-theory/
+│       ├── kirchhoff-laws.md
+│       ├── thevenin-norton.md
+│       ├── ac-analysis.md
+│       └── phasors.md
+│
+└── simulations/
+    ├── ltspice/
+    │   ├── inverting-amplifier.asc
+    │   ├── filters.asc
+    │   └── transistor-amp.asc
+    │
+    └── proteus/
+        └── sample-projects-here.txt
