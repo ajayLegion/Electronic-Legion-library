@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Legion Library - AI-Assisted Circuit Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black font-sans">
+    <!-- Header -->
+    <header class="border-b border-gray-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" />
+                    </svg>
+                    <h1 class="text-2xl font-bold">Electronic Legion Library</h1>
+                </div>
+                <a href="https://github.com/ajayLegion/Electronic-Legion-library" target="_blank"
+                    class="px-4 py-2 border border-black hover:bg-black hover:text-white transition-colors duration-300">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-b from-white to-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <div class="float-animation inline-block mb-6">
+                <svg class="w-20 h-20 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                </svg>
+            </div>
+            <h2 class="text-5xl font-bold mb-6">AI-Assisted Analog Circuit Design</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                A structured, validated, and machine-readable reference for AI-assisted analog circuit diagram
+                generation
+            </p>
+            <div class="flex justify-center space-x-4">
+                <span class="px-4 py-2 bg-black text-white font-semibold">Active Development</span>
+                <span class="px-4 py-2 border border-gray-400 text-gray-600">MIT License</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Primary Goal -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-3xl font-bold mb-6">Primary Goal</h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    To build the most reliable backend reference for an AI system by ensuring component definitions and
+                    symbols are minimal, uniform, and validated against strict schemas.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tooling & Capability -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold mb-12 text-center">Tooling & Capability</h3>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="border border-gray-300 p-8 hover:border-black transition-colors duration-300">
+                    <h4 class="text-xl font-bold mb-4">Validation Script</h4>
+                    <p class="text-gray-600 mb-4">validate.py</p>
+                    <p class="text-gray-700">
+                        Parses all component YAML files and ensures they conform to JSON schemas, guaranteeing data
+                        consistency and machine reliability.
+                    </p>
+                </div>
+                <div class="border border-gray-300 p-8 hover:border-black transition-colors duration-300">
+                    <h4 class="text-xl font-bold mb-4">Rendering Script</h4>
+                    <p class="text-gray-600 mb-4">render.py (Future)</p>
+                    <p class="text-gray-700">
+                        Auto-generate circuit diagrams from component lists using SVG assets, serving as
+                        proof-of-concept for AI-driven generation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Data Assets -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold mb-12 text-center">Core Data Assets</h3>
+            <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div class="border border-gray-300 p-6 hover:bg-white hover:shadow-lg transition-all duration-300">
+                    <h4 class="text-xl font-bold mb-3">Components (YAML)</h4>
+                    <p class="text-gray-600 text-sm mb-3">Machine-readable definitions</p>
+                    <ul class="text-gray-700 text-sm space-y-1">
+                        <li>• Resistors, Capacitors, Inductors</li>
+                        <li>• Semiconductors (Diodes, BJT, MOSFET)</li>
+                        <li>• Integrated Circuits (OPAMPs)</li>
+                    </ul>
+                </div>
+                <div class="border border-gray-300 p-6 hover:bg-white hover:shadow-lg transition-all duration-300">
+                    <h4 class="text-xl font-bold mb-3">Symbols (SVG)</h4>
+                    <p class="text-gray-600 text-sm mb-3">Minimal, uniform library</p>
+                    <p class="text-gray-700 text-sm">
+                        SVG schematic symbols for quick rendering and consistent visual style, organized by category.
+                    </p>
+                </div>
+                <div class="border border-gray-300 p-6 hover:bg-white hover:shadow-lg transition-all duration-300">
+                    <h4 class="text-xl font-bold mb-3">Schemas</h4>
+                    <p class="text-gray-600 text-sm mb-3">JSON Schema validation</p>
+                    <p class="text-gray-700 text-sm">
+                        Structural rules enforcing data consistency critical for machine reliability.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples & Future Modules -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-16">
+                    <h3 class="text-3xl font-bold mb-8 text-center">Examples</h3>
+                    <div class="border border-gray-300 p-8">
+                        <p class="text-gray-700 mb-4">
+                            Fully worked sample cases demonstrating integration of data, symbols, and simulation files:
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• Component definitions (YAML)</li>
+                            <li>• Resulting schematic diagrams (SVG/PNG)</li>
+                            <li>• Associated theory and calculations (Markdown)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="text-3xl font-bold mb-8 text-center">Project Expansion</h3>
+                <div class="space-y-6">
+                    <div class="border-l-4 border-black pl-6 py-4">
+                        <h4 class="text-xl font-bold mb-2">Circuits</h4>
+                        <p class="text-gray-600 mb-2">Topic-based folders with verified analog circuit concepts</p>
+                        <p class="text-gray-700 text-sm">Basic Theory • OP-AMP Circuits • Filters</p>
+                    </div>
+                    <div class="border-l-4 border-gray-400 pl-6 py-4">
+                        <h4 class="text-xl font-bold mb-2">Simulations</h4>
+                        <p class="text-gray-600 mb-2">Pre-verified simulation files for circuit validation</p>
+                        <p class="text-gray-700 text-sm">LTspice • Proteus</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Repository Structure -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold mb-8 text-center">Repository Structure</h3>
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-white border border-gray-300 p-6 font-mono text-sm">
+                    <div class="text-gray-700">components/resistors</div>
+                    <div class="text-gray-700">examples/opamp-inverting</div>
+                    <div class="text-gray-700">schemas</div>
+                    <div class="text-gray-700">symbols</div>
+                    <div class="text-gray-600 mt-4">LICENSE</div>
+                    <div class="text-gray-600">README.md</div>
+                    <div class="text-gray-600">RepoStructure.text</div>
+                    <div class="text-gray-600">render.py</div>
+                    <div class="text-gray-600">validate.py</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-700 mb-2">Electronic Legion Library</p>
+            <p class="text-gray-600 text-sm">MIT License • Created by ajayLegion</p>
+            <div class="mt-4">
+                <a href="https://github.com/ajayLegion/Electronic-Legion-library" target="_blank"
+                    class="text-gray-600 hover:text-black transition-colors duration-300">
+                    github.com/ajayLegion/Electronic-Legion-library
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
