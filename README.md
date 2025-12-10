@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ⚡ Electronic-Legion-library
 
 **Status:** Active Development (Focus on Core Data Assets and Validation)
@@ -68,3 +69,5 @@ Pre-verified simulation files for the circuits defined in Section 7. This provid
 
 ## ⚖️ License
 MIT License.
+=======
+>>>>>>> daf482f (update Readme)
