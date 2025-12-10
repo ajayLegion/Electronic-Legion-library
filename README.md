@@ -1,6 +1,18 @@
 # Electronic-Legion-library
-Minimal, student-friendly electronic schematic symbols and component definitions. Designed for AI-assisted diagram generation and simple educational circuits. 
+This repository is in active development.   
+Its purpose is to provide a structured, machine-readable resource for an AI chatbot to generate clean, consistent analog electronic circuit diagrams.
 A structured repository for analog electronics concepts, circuit theory, schematic symbols, component metadata, and simulation files.
+
+### Primary Goal
+Serve as a backend reference for an AI system:
+- Component definitions in YAML  
+- Minimal, uniform SVG schematic symbols  
+- Example circuits with component metadata  
+- Validated schemas to keep all files consistent  
+
+### Not intended as a full textbook  
+This repository acts as a standardized library that an AI can parse to assemble accurate analog circuit drawings.
+
 ## Repository Sections
 
 ### 1. Circuits
@@ -46,12 +58,12 @@ Validation structures for consistent component definitions:
 ### 6. Examples
 Sample diagrams, component lists, and notes showing how everything works together.
 
-## Purpose
-To build a long-term, organized analog electronics reference that includes:
-- Human-readable notes  
-- Machine-readable components  
-- Reusable schematic symbols  
-- Verified circuit examples  
+## Future Plans
+- Full symbol library for all major analog components  
+- Complete YAML component database  
+- Auto-validation scripts  
+- Larger example library for AI-driven schematic generation  
+- Optional script to auto-render diagrams from YAML + SVG assets  
 
 ## License
 MIT License.
