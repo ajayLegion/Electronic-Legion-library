@@ -1,52 +1,57 @@
 # Electronic-Legion-library
-Minimal, student-friendly electronic schematic symbols and component definitions. Designed for AI-assisted diagram generation and simple educational circuits.
-# Analog Electronics & Circuit Theory
+Minimal, student-friendly electronic schematic symbols and component definitions. Designed for AI-assisted diagram generation and simple educational circuits. 
+A structured repository for analog electronics concepts, circuit theory, schematic symbols, component metadata, and simulation files.
+## Repository Sections
 
-A structured collection of analog electronics concepts, handwritten notes, circuit explanations, and simulation files.  
-The goal is to build a clean, modular reference covering essential analog circuits and foundational theory.
+### 1. Circuits
+Topic-based folders containing explanations and diagrams:
+- OP-AMP circuits
+- Filters
+- Diode circuits
+- Transistor circuits
+- Basic circuit theory
 
-## Contents
+### 2. Simulations
+Simulation-ready files:
+- LTspice (.asc)
+- Proteus project files
 
-### 1. Circuit Theory
-- Kirchhoff laws (KVL & KCL)  
-- Thevenin & Norton equivalent circuits  
-- AC analysis  
-- Phasor representation  
+### 3. Symbols
+A minimal library of SVG schematic symbols organized by category:
+- Resistors, capacitors, inductors  
+- Diodes and other semiconductors  
+- BJTs, MOSFETs  
+- OPAMP blocks  
+- Miscellaneous symbols  
 
-### 2. OP-AMP Circuits
-- Inverting amplifier  
-- Non-inverting amplifier  
-- Differential amplifier  
-- Integrator and differentiator  
+These symbols are designed for easy reuse in notes, docs, and auto-generated diagrams.
 
-### 3. Filters
-- Low pass  
-- High pass  
-- Band pass  
+### 4. Components (YAML)
+Machine-readable component definitions:
+- Resistors
+- Capacitors
+- Inductors
+- Semiconductors (diodes, BJT, MOSFET)
+- Power components
+- ICs
 
-### 4. Diode Circuits
-- Rectifiers  
-- Clippers  
-- Clampers  
+Each file follows the validation schema in `/schemas`.
 
-### 5. Transistor Circuits
-- BJT amplifiers  
-- MOSFET amplifiers  
+### 5. Schemas
+Validation structures for consistent component definitions:
+- Component schema
+- Symbol schema
+- Metadata schema
 
-### 6. Simulation Files
-LTspice and Proteus simulations for circuits included in this repository.
+### 6. Examples
+Sample diagrams, component lists, and notes showing how everything works together.
 
 ## Purpose
-
-This repository is intended as a continuously growing reference for students, hobbyists, and anyone studying analog electronics.
-
-## How to Contribute
-
-1. Fork the repo  
-2. Create a branch  
-3. Add your circuit explanation or simulation  
-4. Submit a pull request  
+To build a long-term, organized analog electronics reference that includes:
+- Human-readable notes  
+- Machine-readable components  
+- Reusable schematic symbols  
+- Verified circuit examples  
 
 ## License
-
-MIT License 
+MIT License.
