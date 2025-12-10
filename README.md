@@ -1,69 +1,70 @@
-# Electronic-Legion-library
-This repository is in active development.   
-Its purpose is to provide a structured, machine-readable resource for an AI chatbot to generate clean, consistent analog electronic circuit diagrams.
-A structured repository for analog electronics concepts, circuit theory, schematic symbols, component metadata, and simulation files.
+# ⚡ Electronic-Legion-library
+
+**Status:** Active Development (Focus on Core Data Assets and Validation)
+
+This repository is designed to serve as a structured, validated, and machine-readable reference for **AI-assisted analog circuit diagram generation.** It provides the fundamental data (symbols, component definitions) needed for an LLM to assemble accurate, consistent schematics.
 
 ### Primary Goal
-Serve as a backend reference for an AI system:
-- Component definitions in YAML  
-- Minimal, uniform SVG schematic symbols  
-- Example circuits with component metadata  
-- Validated schemas to keep all files consistent  
+To build the most reliable backend reference for an AI system by ensuring component definitions and symbols are minimal, uniform, and validated against strict schemas.
 
-### Not intended as a full textbook  
-This repository acts as a standardized library that an AI can parse to assemble accurate analog circuit drawings.
+---
 
-## Repository Sections
+## 🛠️ Tooling & Capability (What Makes This Usable)
 
-### 1. Circuits
-Topic-based folders containing explanations and diagrams:
-- OP-AMP circuits
-- Filters
-- Diode circuits
-- Transistor circuits
-- Basic circuit theory
+This section contains the necessary scripts to prove the machine-readability of the data assets.
 
-### 2. Simulations
-Simulation-ready files:
-- LTspice (.asc)
-- Proteus project files
+### 1. Validation Script (`validate.py`)
+A script that parses all component YAML files in `/components` and ensures they conform exactly to the JSON schemas defined in `/schemas`.
 
-### 3. Symbols
-A minimal library of SVG schematic symbols organized by category:
-- Resistors, capacitors, inductors  
-- Diodes and other semiconductors  
-- BJTs, MOSFETs  
-- OPAMP blocks  
-- Miscellaneous symbols  
+### 2. Rendering Script (Future: `render.py`)
+(Future Plan) An optional Python script to auto-generate a circuit SVG/PNG from a component list using the SVG assets in `/symbols`. This script serves as the "proof-of-concept" for AI-driven diagram generation.
 
-These symbols are designed for easy reuse in notes, docs, and auto-generated diagrams.
+---
 
-### 4. Components (YAML)
-Machine-readable component definitions:
-- Resistors
-- Capacitors
-- Inductors
-- Semiconductors (diodes, BJT, MOSFET)
-- Power components
-- ICs
+## 📂 Core Data Assets (The Library)
 
-Each file follows the validation schema in `/schemas`.
+These sections represent the current, validated core of the library.
+
+### 3. Components (YAML)
+Machine-readable definitions for passive, active, and integrated components. Each definition follows a consistent YAML structure for easy parsing by external tools and AIs.
+
+* Resistors, Capacitors, Inductors
+* Semiconductors (Diodes, BJT, MOSFET)
+* Integrated Circuits (OPAMPs)
+
+### 4. Symbols (SVG)
+A minimal, uniform library of SVG schematic symbols designed for quick rendering and consistent visual style. Organized by category (e.g., Passive, Active).
 
 ### 5. Schemas
-Validation structures for consistent component definitions:
-- Component schema
-- Symbol schema
-- Metadata schema
+JSON Schema files that define the structural rules for all component and metadata files. These schemas enforce data consistency, which is critical for machine reliability.
 
 ### 6. Examples
-Sample diagrams, component lists, and notes showing how everything works together.
+Fully worked sample cases that demonstrate the integration of data, symbols, and (eventually) simulation files.
 
-## Future Plans
-- Full symbol library for all major analog components  
-- Complete YAML component database  
-- Auto-validation scripts  
-- Larger example library for AI-driven schematic generation  
-- Optional script to auto-render diagrams from YAML + SVG assets  
+* Component definitions (YAML)
+* The resulting schematic diagram (SVG/PNG)
+* Associated theory or calculations (Markdown)
 
-## License
+---
+
+## 🎯 Project Expansion (Future Modules)
+
+These folders represent the target outcomes of using the data assets and will be populated as the core library matures.
+
+### 7. Circuits
+Topic-based folders containing verified analog circuit concepts and notes. This is where the machine-readable component definitions are used to build actual circuit examples.
+
+* Basic Circuit Theory (Voltage Dividers, Ohm's Law)
+* OP-AMP Circuits (Inverting, Non-Inverting)
+* Filters (Low-pass, High-pass)
+
+### 8. Simulations
+Pre-verified simulation files for the circuits defined in Section 7. This provides a mechanism for cross-checking the theoretical design.
+
+* LTspice (`.asc`)
+* Proteus project files
+
+---
+
+## ⚖️ License
 MIT License.
