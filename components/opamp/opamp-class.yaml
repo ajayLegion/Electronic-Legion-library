@@ -1,0 +1,14 @@
+type: opamp
+pins:
+  plus:
+    direction: input
+  minus:
+    direction: input
+  out:
+    direction: output
+  vplus:
+    direction: passive
+    role: power
+  vminus:
+    direction: passive
+    role: power

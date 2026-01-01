@@ -1,0 +1,58 @@
+components:
+  U1:
+    ref: opamp
+  C1:
+    ref: capacitor
+    value: 10n
+  R_in:
+    ref: resistor
+    value: 100k
+  Rf:
+    ref: resistor
+    value: 1M
+  Rbias1:
+    ref: resistor
+    value: 100k
+  Rbias2:
+    ref: resistor
+    value: 100k
+  Vin:
+    ref: terminal
+  Vout:
+    ref: terminal
+  VCC_term:
+    ref: terminal
+  VEE_term:
+    ref: terminal
+  GND_term:
+    ref: ground
+
+nets:
+  GND:
+    - GND_term.1
+    - Rbias2.2
+  VCC:
+    - U1.vplus
+    - VCC_term.1
+  VEE:
+    - U1.vminus
+    - VEE_term.1
+  N_in:
+    - Vin.1
+    - C1.1
+  N_couple:
+    - C1.2
+    - R_in.1
+  N_inv:
+    - R_in.2
+    - U1.minus
+    - Rf.2
+  N_out:
+    - U1.out
+    - Vout.1
+    - Rf.1
+    - Rbias1.1
+  N_bias:
+    - Rbias1.2
+    - Rbias2.1
+    - U1.plus

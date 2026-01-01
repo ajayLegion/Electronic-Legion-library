@@ -21,6 +21,9 @@ def main():
     component_library = {
         "resistor": "components/resistors/resistor-class.yaml",
         "terminal": "components/terminal/terminal-class.yaml",
+        "opamp": "components/opamp/opamp-class.yaml",
+        "capacitor": "components/capacitor/capacitor-class.yaml",
+        "ground": "components/ground/ground-class.yaml",
     }
 
     try:

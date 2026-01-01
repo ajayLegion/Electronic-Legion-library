@@ -1,4 +1,5 @@
-type: terminal
+type: ground
 pins:
   1:
     direction: passive
+    role: ground

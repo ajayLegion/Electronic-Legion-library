@@ -1,0 +1,6 @@
+type: capacitor
+pins:
+  1:
+    direction: passive
+  2:
+    direction: passive
