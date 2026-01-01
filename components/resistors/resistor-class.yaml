@@ -1,0 +1,7 @@
+type: resistor
+value: 10k
+pins:
+  1:
+    direction: passive
+  2:
+    direction: passive
