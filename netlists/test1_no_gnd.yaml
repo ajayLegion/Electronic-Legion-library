@@ -1,0 +1,22 @@
+components:
+  R1:
+    ref: resistor
+    value: 10k
+  R2:
+    ref: resistor
+    value: 10k
+  P1:
+    ref: terminal
+  P2:
+    ref: terminal
+
+nets:
+  N_in:
+    - P1.1
+    - R1.1
+  N_mid:
+    - R1.2
+    - R2.1
+  N_out:
+    - R2.2
+    - P2.1

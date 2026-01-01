@@ -1,0 +1,21 @@
+components:
+  - name: P1
+    symbol: null
+    pos: [20, 80]
+  - name: R1
+    symbol: resistor-basic
+    pos: [100, 80]
+  - name: R2
+    symbol: resistor-basic
+    pos: [200, 80]
+  - name: P2
+    symbol: null
+    pos: [280, 80]
+
+connections:
+  - start: [20, 80]
+    end: [90, 80]
+  - start: [110, 80]
+    end: [190, 80]
+  - start: [210, 80]
+    end: [280, 80]

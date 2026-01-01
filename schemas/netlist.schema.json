@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "required": ["components", "nets"],
+  "properties": {
+    "components": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["ref"],
+        "properties": {
+          "ref": { "type": "string" },
+          "value": { "type": ["string", "number", "null"] }
+        }
+      }
+    },
+    "nets": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 2,
+        "items": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_]+\\.[A-Za-z0-9_]+$"
+        }
+      }
+    }
+  }
+}

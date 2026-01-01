@@ -1,0 +1,16 @@
+components:
+  R1:
+    ref: resistor
+    value: 10k
+  G1:
+    ref: terminal
+  G2:
+    ref: terminal
+
+nets:
+  GND:
+    - G1.1
+    - R1.1
+  GND2:
+    - G2.1
+    - R1.2

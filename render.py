@@ -80,11 +80,28 @@ def assemble_svg_text(components, connections, canvas_w, canvas_h, symbols_root=
     parts.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{canvas_w}" height="{canvas_h}" viewBox="0 0 {canvas_w} {canvas_h}">')
     parts.append('<defs></defs>')
 
-    # Draw wires
+    # Build quick lookup of component positions for snapping
+    pos_map = {}
+    for c in components:
+        pos = c.get('pos') or [0, 0]
+        pos_key = (int(pos[0]), int(pos[1]))
+        pos_map[pos_key] = c
+
+    # Draw wires (snap endpoints to nearby component centers within tolerance)
+    SNAP_TOL = 8
     for conn in connections:
         s = conn.get('start', [0, 0])
         e = conn.get('end', [0, 0])
-        parts.append(f'<line x1="{s[0]}" y1="{s[1]}" x2="{e[0]}" y2="{e[1]}" stroke="black" stroke-width="2" />')
+
+        def snap(pt):
+            for (px, py), comp in pos_map.items():
+                if abs(pt[0] - px) <= SNAP_TOL and abs(pt[1] - py) <= SNAP_TOL:
+                    return [px, py]
+            return pt
+
+        s = snap(s)
+        e = snap(e)
+        parts.append(f'<line x1="{s[0]}" y1="{s[1]}" x2="{e[0]}" y2="{e[1]}" stroke="black" stroke-width="2" stroke-linecap="round" />')
 
     # Insert symbols
     for comp in components:
@@ -118,13 +135,13 @@ def assemble_svg_text(components, connections, canvas_w, canvas_h, symbols_root=
             else:
                 # Placeholder rectangle
                 parts.append(f'<rect x="{x-8}" y="{y-8}" width="16" height="16" fill="none" stroke="red" />')
-                parts.append(f'<text x="{x+10}" y="{y+4}" font-size="12" >{name} (missing:{symbol})</text>')
+                parts.append(f'<text x="{x+12}" y="{y+14}" font-size="12" >{name} (missing:{symbol})</text>')
                 continue
         else:
             parts.append(f'<rect x="{x-6}" y="{y-6}" width="12" height="12" fill="none" stroke="orange" />')
 
-        # Label near symbol
-        parts.append(f'<text x="{x+10}" y="{y+4}" font-size="12">{name}</text>')
+        # Label near symbol (slightly below to avoid overlap)
+        parts.append(f'<text x="{x+12}" y="{y+14}" font-size="12">{name}</text>')
 
     parts.append('</svg>')
     return '\n'.join(parts)
@@ -133,10 +150,25 @@ def assemble_svg_text(components, connections, canvas_w, canvas_h, symbols_root=
 def render_with_svgwrite(components, connections, canvas_w, canvas_h, out_path, symbols_root='symbols'):
     dwg = svgwrite.Drawing(out_path, size=(canvas_w, canvas_h))
     # wires
+    # build pos map for snapping
+    pos_map = {}
+    for c in components:
+        pos = c.get('pos') or [0, 0]
+        pos_map[(int(pos[0]), int(pos[1]))] = pos
+
+    SNAP_TOL = 8
+    def snap(pt):
+        for (px, py), p in pos_map.items():
+            if abs(pt[0] - px) <= SNAP_TOL and abs(pt[1] - py) <= SNAP_TOL:
+                return (px, py)
+        return (pt[0], pt[1])
+
     for conn in connections:
         s = conn.get('start', [0, 0])
         e = conn.get('end', [0, 0])
-        dwg.add(dwg.line(start=(s[0], s[1]), end=(e[0], e[1]), stroke_width=2))
+        s = snap(s)
+        e = snap(e)
+        dwg.add(dwg.line(start=s, end=e, stroke_width=2, stroke='black', stroke_linecap='round'))
 
     for comp in components:
         name = comp.get('name', 'U?')

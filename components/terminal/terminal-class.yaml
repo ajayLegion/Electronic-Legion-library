@@ -1,0 +1,5 @@
+type: terminal
+pins:
+  1:
+    direction: passive
+    role: ground
